@@ -1,0 +1,29 @@
+    <header class="header">
+      <div class="container header-content">
+        <a routerLink="/" class="logo" (click)="isMenuOpen.set(false)" aria-label="Home">
+          <img ngSrc="/images/programmersingh.svg" alt="Simar Preet Singh Logo" height="32" width="145" priority />
+        </a>
+        
+        <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+          @if (isMenuOpen()) {
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          } @else {
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          }
+        </button>
+
+        <nav class="nav-links" [class.open]="isMenuOpen()">
+          <a routerLink="/" fragment="about" (click)="isMenuOpen.set(false)">About</a>
+          <a routerLink="/" fragment="experience" (click)="isMenuOpen.set(false)">Experience</a>
+          <a routerLink="/work" routerLinkActive="active" (click)="isMenuOpen.set(false)">Work</a>
+          <a routerLink="/talks" routerLinkActive="active" (click)="isMenuOpen.set(false)">Talks</a>
+          <button class="cta-btn mobile-only" onclick="document.getElementById('contact')?.scrollIntoView()" (click)="isMenuOpen.set(false)">
+            Let's Talk
+          </button>
+        </nav>
+        
+        <button class="cta-btn desktop-only" onclick="document.getElementById('contact')?.scrollIntoView()">
+          Let's Talk
+        </button>
+      </div>
+    </header>

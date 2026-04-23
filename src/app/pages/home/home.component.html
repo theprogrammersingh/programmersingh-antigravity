@@ -1,0 +1,21 @@
+    <app-hero />
+    <app-about />
+    <app-work-experience />
+    
+    @defer (on viewport) {
+      <app-skills />
+    } @placeholder {
+      <div style="min-height: 400px;"></div>
+    }
+
+    @defer (on viewport) {
+      <app-projects />
+    } @placeholder {
+      <div style="min-height: 800px;"></div>
+    }
+
+    @defer (on viewport) {
+      <app-speaking />
+    } @placeholder {
+      <div style="min-height: 600px;"></div>
+    }
