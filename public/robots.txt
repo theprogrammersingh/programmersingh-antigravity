@@ -1,0 +1,49 @@
+# robots.txt for programmersingh.dev
+# https://www.robotstxt.org/robotstxt.html
+
+# Allow all major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Allow all other well-behaved crawlers
+User-agent: *
+Allow: /
+
+# Block access to Angular build artifacts and internal assets
+Disallow: /assets/chunks/
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Block AI training scrapers (optional — protects original content)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+# Sitemap location
+Sitemap: https://programmersingh.dev/sitemap.xml
